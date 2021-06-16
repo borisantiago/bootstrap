@@ -22,6 +22,24 @@ function insertar(){
         document.formulario.area.style.border="1px solid red";
     }
 
+    if(document.formulario.email.value!="" && document.formulario.cantidad.value!="seleccione la cantidad" && document.formulario.area.value!=""){
+        $("#alert_save").show("fast");
+
+        //alerta quitar en lapso tiempo
+        setTimeout(function() {
+            $("#alert_save").fadeOut(); 
+                /*email*/
+                    document.formulario.email.value="";
+                    document.formulario.email.style.border="";
+                /*cantidad*/
+                    document.formulario.cantidad.value="seleccione la cantidad";
+                    document.formulario.cantidad.style.border="";
+                /*area*/
+                    document.formulario.area.value="";
+                    document.formulario.area.style.border="";
+        },3000); 
+    }
+
 }
 
 
