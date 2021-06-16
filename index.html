@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/estilo.css">
+     
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- 
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    -->
+
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    
+
+    <!-- Complemento -->
+    
+  
+    
+        
+    <title>Grupo 5 - Bootstrap</title>
+  </head>
+
+  <body>
+    <div class="nav2">
+        hola
+    </div>
+
+    <!-- CABECERA -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" onclick="btn_home()" href="#">Home</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              
+              <li><a onclick="btn_formulario()" href="#">Form</a></li>
+            
+              <!-- 
+                <li><a  href="#">Buttons</a></li>
+
+                <li><a href="#">Alerts</a></li>
+                -->
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+        
+      <div class="container">
+        <h3>Grupo #5</h3>
+        <p>Sistemas de multimendia y gamificación.
+        
+
+        
+        <div class="col-md-7 ">
+            <div class="card-body">
+
+            </div>
+            
+                <!-- FORM -->
+                <form method="POST" id="formulario" name="formulario" class="">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Email address</label>
+                      <input onkeyup="colocar_correo()" type="email" class="form-control" name="email" placeholder="name@example.com">
+                    </div>
+
+                    <!-- alerta email -->
+                    <div class="alert alert-danger alert-dismissible ocultar" role="alert" id="error_email">
+                        <strong>Error en el email!</strong> complete!!.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Cantidad de objetos</label>
+                      <select onclick="colocar_objeto()" class="form-control" name="cantidad">
+                        <option>seleccione la cantidad</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        
+                      </select>
+                    </div>
+
+                    <!-- alerta cantidad -->
+                    <div class="alert alert-danger alert-dismissible ocultar" role="alert" id="error_objetos">
+                        <strong>Escoger almenos </strong> un objeto!!.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect2">Example multiple select</label>
+                      <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Example textarea</label>
+                      <textarea onclick="colocar_area()" class="form-control" name="area" rows="3"></textarea>
+                    </div>
+
+                    <!-- alerta cantidad -->
+                    <div class="alert alert-danger alert-dismissible ocultar" role="alert" id="error_area">
+                        <strong>Complete </strong> alguna desripcion!!.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="form-group"> 
+                        <button onclick="insertar()" type="button" class="btn btn-primary btn-block text-center">Agregar producto</button>
+                    </div>    
+
+                  </form>
+
+        </div>
+
+       
+
+      </div>
+
+      <!-- -->
+
+
+   
+  </body>
+  <script  type="text/javascript" src="js/funciones.js"></script>
+</html>
